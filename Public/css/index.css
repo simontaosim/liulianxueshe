@@ -1,0 +1,189 @@
+.custom-header{
+  background-color: rgba(255, 255, 255, 0.91) !important;
+  border-bottom: 0px;
+  left: 20% !important;
+
+}
+.custom-banner{
+  position: relative;
+  width: 170px;
+  top: 7px;
+  /*padding-left: 50px !important;*/
+  padding-right: 50px !important;
+  -moz-background-size:100% 100%; /* 老版本的 Firefox */
+background-size:100% 100%;
+background-repeat:no-repeat;
+font-size: 12pt
+}
+.custom-banner img{
+  width: 150px;
+  
+  margin-top: -15%;
+}
+
+.custom-nav-bar-item{
+
+  position: relative;
+  margin-bottom: 0px !important;
+
+}
+.custom-nav-bar-item a{
+  font-size: 12pt !important;
+  text-align: center !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-bottom: 20px !important;
+  padding-top: 20px !important;
+  font-weight: bolder;
+  color: #271d1b !important;
+}
+.custom-nav-bar-item:hover{
+  position: relative;
+  margin-bottom: 0px !important;
+  color: #271d1b !important;
+  background-color: #f2f2f2;
+}
+.custom-nav-bar-long-item:hover{
+  position: relative;
+  margin-bottom: 0px !important;
+  color: #271d1b !important;
+  background-color: #f2f2f2;
+}
+.custom-nav-bar-long-item a{
+  font-size: 12pt !important;
+  text-align: center !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-bottom: 20px !important;
+  padding-top: 20px !important;
+  font-weight: bolder;
+  color: #261e1b !important;
+}
+.left-blank{
+  width: 5%;
+}
+.drop-item{
+  width: 75pt;
+  text-align: center;
+}
+.menu-item{
+  min-width: 75pt !important;
+  width: 75pt;
+  font-size: 12pt;
+  text-align: center;
+}
+.title-little{
+  text-align: center;
+  color: rgba(70, 108, 118, 1);
+}
+.index_item_block{
+  color: rgba(70, 108, 118, 1);
+}
+.index_item_block dt{
+  margin-bottom: 10px !important;
+  font-size: 14pt;
+}
+.static-bars{
+  padding-top: 24pt;
+}
+.footer{
+  margin-top: 80pt;
+  background-image: url('../images/footer_bg.png');
+  -moz-background-size:100% 100%; /* 老版本的 Firefox */
+background-size:100% 100%;
+background-repeat:no-repeat;
+}
+.footer-item{
+
+  padding-top: 35pt;
+}
+.footer-item dt{
+  font-size: 16pt;
+  margin-bottom: 15pt;
+  color: rgba(220,220,220,1);
+}
+.footer-item dd{
+  font-size: 8pt;
+  color: rgba(220,220,220,1);
+}
+.custom-dropdown {
+  min-width: 79px !important;
+  background-color: rgba(0,0,0,0.8) !important;
+  color: rgba(180,180,180,1) !important;
+}
+.custom-dropdown a{
+    color: rgba(180,180,180,1) !important;
+}
+
+.custom-dropdown a:hover{
+  background-color: rgba(0,0,0,0.8) !important;
+  color: rgba(255,255,255,1) !important;
+}
+
+
+
+
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/UyBMtLsHKBKXelqf4x7VRQ.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/1YwB1sO8YE1Lyjf12WNiUA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/ObQr5XYcoH0WBoUxiaYK3_Y6323mHUZFJMgTvxaG2iE.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/H2DMvhDLycM56KNuAtbJYA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/YMOYVM-eg6Qs9YzV9OSqZfesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/PLygLKRVCQnA5fhu3qk5fQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/AcvTq8Q0lyKKNxRlL28RnxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYEFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}

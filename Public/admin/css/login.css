@@ -1,0 +1,9 @@
+body{
+  background-image: url("/Public/admin/images/login_bg.png");
+  background-size: contain;
+}
+.login-form{
+  position: relative;
+  top: -200;
+  margin-top: 200 !important;
+}

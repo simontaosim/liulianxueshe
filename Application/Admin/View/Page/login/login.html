@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>留联后台登录</title>
+  <link rel="stylesheet" type="text/css" href="/Public/semantic/dist/semantic.min.css">
+  <link rel="stylesheet" href="/Public/admin/css/login.css" media="screen" title="no title" charset="utf-8">
+  <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+  <script src="/Public/semantic/dist/semantic.min.js"></script>
+  <script src="/Public/admin/js/lib/md5.js"></script>
+</head>
+<body>
+  <div class="container-fluid ui grid">
+    <div class="row">
+      <div class="five wide column">
+
+      </div>
+      <div class="five wide column">
+          <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="five wide column">
+
+      </div>
+      <div class="ui card five wide column login-form">
+        <div class="content">
+          <p class="header"><a href="index.html">留联后台管理系统</a></p>
+          <div class="ui icon message" id="loginMasssage">
+            <i class="notched circle loading icon" id="massageIcon"></i>
+            <div class="content">
+              <div class="header">
+                登录中，请稍后...
+              </div>
+            </div>
+          </div>
+          <div class="description">
+              <form class="ui form" method="post" action="/admin/">
+                <div class="field">
+                  <label>用户名</label>
+                  <input type="text" name="username" placeholder="请在此处输入用户名">
+                </div>
+                <div class="field">
+                  <label>密码</label>
+                  <input type="password" name="password" placeholder="请在此处输入密码">
+                </div>
+                <input  class="ui button" type="submit" name="submit" value="登录">
+              </form>
+          </div>
+        </div>
+        <div class="extra content">
+            <span class="date">Power by S.K</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+<script src="/Public/admin/js/modules/login.js"></script>
+</body>
+</html>
