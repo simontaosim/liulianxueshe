@@ -1,0 +1,198 @@
+[ 2016-01-14T03:07:50+08:00 ] 127.0.0.1 /Public/admin/js/lib/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000548s ]
+ERR: 无法加载模块:Public
+
+[ 2016-01-14T03:09:44+08:00 ] 127.0.0.1 /Public/admin/js/lib/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+ERR: 无法加载模块:Public
+
+[ 2016-01-14T03:10:00+08:00 ] 127.0.0.1 /Public/admin/js/lib/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000507s ]
+ERR: 无法加载模块:Public
+
+[ 2016-01-14T03:10:30+08:00 ] 127.0.0.1 /TeacherImages/thumb/%7B%7Bobj.thumbnail%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+ERR: 无法加载模块:TeacherImages
+
+[ 2016-01-14T03:10:30+08:00 ] 127.0.0.1 /WorkImages/%7B%7Bdetail.cover%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+ERR: 无法加载模块:WorkImages
+
+[ 2016-01-14T03:10:30+08:00 ] 127.0.0.1 /WorkImages/%7B%7Borigin.cover%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001093s ]
+ERR: 无法加载模块:WorkImages
+
+[ 2016-01-14T03:10:31+08:00 ] 127.0.0.1 /Public/admin/js/lib/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+ERR: 无法加载模块:Public
+
+[ 2016-01-14T03:10:31+08:00 ] 127.0.0.1 /TeacherImages/thumb/%7B%7Bobj.thumbnail%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+ERR: 无法加载模块:TeacherImages
+
+[ 2016-01-14T03:10:31+08:00 ] 127.0.0.1 /WorkImages/%7B%7Bdetail.cover%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+ERR: 无法加载模块:WorkImages
+
+[ 2016-01-14T03:10:31+08:00 ] 127.0.0.1 /WorkImages/%7B%7Borigin.cover%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001589s ]
+ERR: 无法加载模块:WorkImages
+
+[ 2016-01-14T03:10:31+08:00 ] 127.0.0.1 /Public/admin/js/lib/angular.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+ERR: 无法加载模块:Public
+
+[ 2016-01-14T03:10:31+08:00 ] 127.0.0.1 /TeacherImages/thumb/%7B%7Bobj.thumbnail%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+ERR: 无法加载模块:TeacherImages
+
+[ 2016-01-14T03:10:31+08:00 ] 127.0.0.1 /WorkImages/%7B%7Bdetail.cover%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+ERR: 无法加载模块:WorkImages
+
+[ 2016-01-14T03:10:31+08:00 ] 127.0.0.1 /WorkImages/%7B%7Borigin.cover%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+ERR: 无法加载模块:WorkImages
+
+[ 2016-01-14T03:10:32+08:00 ] 127.0.0.1 /WorkImages/%7B%7Borigin.cover%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+ERR: 无法加载模块:WorkImages
+
+[ 2016-01-14T03:10:32+08:00 ] 127.0.0.1 /WorkImages/%7B%7Bdetail.cover%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001245s ]
+ERR: 无法加载模块:WorkImages
+
+[ 2016-01-14T03:10:57+08:00 ] 127.0.0.1 /TeacherImages/thumb/%7B%7Bobj.thumbnail%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000958s ]
+ERR: 无法加载模块:TeacherImages
+
+[ 2016-01-14T03:10:57+08:00 ] 127.0.0.1 /WorkImages/%7B%7Bdetail.cover%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+ERR: 无法加载模块:WorkImages
+
+[ 2016-01-14T03:10:57+08:00 ] 127.0.0.1 /WorkImages/%7B%7Borigin.cover%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+ERR: 无法加载模块:WorkImages
+
+[ 2016-01-14T03:10:57+08:00 ] 127.0.0.1 /Public/admin/js/lib/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000319s ]
+ERR: 无法加载模块:Public
+
+[ 2016-01-14T03:10:57+08:00 ] 127.0.0.1 /WorkImages/%7B%7Bdetail.cover%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+ERR: 无法加载模块:WorkImages
+
+[ 2016-01-14T03:10:57+08:00 ] 127.0.0.1 /WorkImages/%7B%7Borigin.cover%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+ERR: 无法加载模块:WorkImages
+
+[ 2016-01-14T03:10:57+08:00 ] 127.0.0.1 /TeacherImages/thumb/%7B%7Bobj.thumbnail%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+ERR: 无法加载模块:TeacherImages
+
+[ 2016-01-14T03:10:57+08:00 ] 127.0.0.1 /Public/admin/js/lib/angular.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+ERR: 无法加载模块:Public
+
+[ 2016-01-14T03:10:58+08:00 ] 127.0.0.1 /WorkImages/%7B%7Borigin.cover%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001157s ]
+ERR: 无法加载模块:WorkImages
+
+[ 2016-01-14T03:10:58+08:00 ] 127.0.0.1 /WorkImages/%7B%7Bdetail.cover%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001156s ]
+ERR: 无法加载模块:WorkImages
+
+[ 2016-01-14T03:10:59+08:00 ] 127.0.0.1 /images/avatar/small/jenny.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+ERR: 无法加载模块:Images
+
+[ 2016-01-14T03:10:59+08:00 ] 127.0.0.1 /images/avatar/small/elliot.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+ERR: 无法加载模块:Images
+
+[ 2016-01-14T03:10:59+08:00 ] 127.0.0.1 /images/avatar/small/matt.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000456s ]
+ERR: 无法加载模块:Images
+
+[ 2016-01-14T03:10:59+08:00 ] 127.0.0.1 /images/avatar/small/justen.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+ERR: 无法加载模块:Images
+
+[ 2016-01-14T03:10:59+08:00 ] 127.0.0.1 /images/avatar/small/stevie.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+ERR: 无法加载模块:Images
+
+[ 2016-01-14T03:10:59+08:00 ] 127.0.0.1 /images/avatar/small/christian.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000522s ]
+ERR: 无法加载模块:Images
+
+[ 2016-01-14T03:10:59+08:00 ] 127.0.0.1 /Public/admin/js/lib/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000341s ]
+ERR: 无法加载模块:Public
+

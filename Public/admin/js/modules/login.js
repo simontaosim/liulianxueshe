@@ -5,11 +5,11 @@ $(".ui .form").ready(function($) {
 	$(this).bind('submit', function(){
 		var username = textinput.val();
 		var password = passinput.val();
-		
+
 		$("#loginMasssage").find(".header").html("登录中，请稍后～");
 		$("#massageIcon").remove();
 		$("#loginMasssage").prepend(' <i class="notched circle loading icon" id="massageIcon"></i>');
-	
+
 		 $("#loginMasssage").show();
 		 $(this).find(":submit").hide();
 		$.ajax({
@@ -17,7 +17,7 @@ $(".ui .form").ready(function($) {
 		  url: "/admin/api/login/auth",
 		  data:{
 		  		username: username,
-		  		password: $.md5(password)	
+		  		password: $.md5(password)
 		  	},
 		  dataType: "json",
 		  success: function(data){
@@ -30,13 +30,13 @@ $(".ui .form").ready(function($) {
 					  	$("#loginMasssage").prepend('<i class="warning sign icon" id="massageIcon"></i>');
 		  		}
 		  		if(data=="4200"){
-		  			
+
 		  			$("#loginMasssage").show();
 		  				$("#loginMasssage").find(".header").html("登录成功！");
 					  	$("#massageIcon").remove();
 					  	$("#loginMasssage").prepend('<i class="smile icon"></i>');
-		  				window.location.assign("/admin/");
-		  				
+		  				window.location.assign("/admin/index");
+
 		  		}
 		  },
 		  error: function(){
@@ -48,6 +48,6 @@ $(".ui .form").ready(function($) {
 		  },
 		  	});
 		  	return false;
-		  
+
 	});
 });

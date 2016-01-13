@@ -9,7 +9,7 @@
     <div></div>
 <a href="/admin/page/teacher/newteacher" class="ui blue button" style="float:right;">
   <i class="plus icon"></i>
-  添加新的作品
+  录入新的老师
 </a>
   <br /><br />
 
@@ -108,10 +108,10 @@
                         </th>
                     </tr></thead>
                     <tbody ng-repeat="obj in objs">
-                      <tr id="obj_{{obj.wid}}">
+                      <tr id="obj_{{obj.uid}}">
                         <td>
                         <span  class="ui small basic icon buttons">
-                            <button id="btn_remove{{obj.wid}}" ng-mouseover="myhint(obj.wid)" ng-click="remove_record(obj.wid)" class="ui button remove-btn" data-content="删除"><i class="remove icon"></i></button>
+                            <button id="btn_remove{{obj.uid}}" ng-mouseover="myhint(obj.uid)" ng-click="remove_record(obj.uid)" class="ui button remove-btn" data-content="删除"><i class="remove icon"></i></button>
 
                         </span>
 
@@ -120,20 +120,19 @@
                             <td>
                               <span  class="ui small basic icon buttons">
 
-                                  <a href="/admin/page/work/editwork?wid={{obj.wid}}" class="ui button edit-btn" data-content="编辑"><i class="edit icon"></i></a>
+                                  <a href="/admin/page/work/editwork?wid={{obj.uid}}" class="ui button edit-btn" data-content="编辑"><i class="edit icon"></i></a>
                               </span>
                             </td>
-                        <td ng-click="showOriginSize(obj.wid)" width="100px">
-                            <span>{{obj.profile}}</span>
-                            <!-- <span  class="ui small rounded centered image" style="text-align: center; width:50%;">
+                        <td ng-click="showOriginSize(obj.uid)" width="100px">
+                            <span  class="ui small rounded centered image" style="text-align: center; width:50%;">
                                 <a href="#" ng-click="showOriginSize(obj.wid)">
-                                    <img src="/Public/thumb/{{obj.thumbnail}}" alt="点击查查原图" width="100">
+                                    <img src="/TeacherImages/thumb/{{obj.thumbnail}}" alt="点击查查原图" width="100">
                                 </a>
 
-                            </span> -->
+                            </span>
                         </td>
                         <td>{{obj.uid}}</td>
-                        <td><a href="#" ng-click="show(obj.wid)">{{obj.truename}}</a></td>
+                        <td><a href="#" ng-click="show(obj.uid)">{{obj.truename}}</a></td>
                         <td>{{obj.birth}}</td>
                         <td>
                           {{obj.major}}

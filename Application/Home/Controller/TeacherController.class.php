@@ -5,4 +5,5 @@ class TeacherController extends Controller {
     public function index(){
 	    $this->display();
   }
+
 }

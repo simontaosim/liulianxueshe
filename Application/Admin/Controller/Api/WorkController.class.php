@@ -53,10 +53,10 @@ class WorkController extends Controller {
 
 
   public function upLoadPic(){
+
 		$upload = new \Think\Upload();// 实例Gd化上传类
 		$upload->maxSize   =     31457280 ;// 设置附件上传大小
-		$upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-		$upload->rootPath  =      __ROOT__.'./WorkImages/'; // 设置附件上传根目录
+		$upload->rootPath  =      './WorkImages/'; // 设置附件上传根目录
 		// 上传单个文件
 		$info   =   $upload->uploadOne($_FILES['photo']);
 		if(!$info) {// 上传错误提示错误信息
@@ -64,7 +64,7 @@ class WorkController extends Controller {
 		}else{// 上传成功 获取上传文件信息
 			$image_path = $info['savepath'].$info['savename'];
       $util = new \Admin\Model\UtilModel();
-			$thumb = $util->workImageCrop($image_path, 150, 150);
+			$thumb = $util->workImageCrop($upload->rootPath.$image_path, $info['ext'], 150, 150);
 			$data = ['thumb' => $thumb, 'cover' => $image_path];
 			$this->ajaxReturn($data, "json");
     	}

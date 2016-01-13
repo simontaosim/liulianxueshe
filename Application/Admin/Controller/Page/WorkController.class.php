@@ -3,33 +3,46 @@ namespace Admin\Controller\Page;
 use Think\Controller;
 class WorkController extends Controller {
     public function index(){
+    	if (session('?admin_token')) {
+    		$massage = I('param.massage', '');
+			$this->pageSetting(1, 20);
 
-    $massage = I('param.massage', '');
-		$this->pageSetting(1, 20);
+	    	$this->menuSetting(7);
 
-    	$this->menuSetting(7);
+			$search_result_title = "最近作品列表";
+			$this->assign('search_result_title',$search_result_title);
 
-		$search_result_title = "最近作品列表";
-		$this->assign('search_result_title',$search_result_title);
+	      	$this->assign('massage', $massage);
 
-      $this->assign('massage', $massage);
+	   		$this->display('index');
+    	} else {
+    		layout(false);
+			$this->display('Page/login/login');
+    	}
 
-   		$this->display('index');
+    	
    	}
 
-		public function newWork(){
+	public function newWork(){
+		if (session('?admin_token')) {
 			$this->menuSetting(7);
 			$this->display('new_work');
 		}
+	}
 
     public function editWork(){
-      $wid = I('param.wid', '');
-      $work = new \Admin\Model\WorkModel();
-      $data = $work->getDetail($wid);
-      $this->assign('data', $data);
-      $this->menuSetting(7);
-
-      $this->display('edit_work');
+    	if (session('?admin_token')) {
+    	  $wid = I('param.wid', '');
+	      $work = new \Admin\Model\WorkModel();
+	      $data = $work->getDetail($wid);
+	      $this->assign('data', $data);
+	      $this->menuSetting(7);
+	      $this->display('edit_work');
+    	} else {
+    		layout(false);
+			$this->display('Page/login/login');
+    	}
+     
     }
 
 		public function create(){
