@@ -131,7 +131,7 @@
   <label>用户名</label>
     <div class="field">
       <input type="text" name="shipping[first-name]" placeholder="请输入用户名" ng-blur="checkUsername(name)" ng-model="name">
-      
+
     </div>
 </div>
 <div class="field">
@@ -165,16 +165,16 @@
 </div>
 <div class="field">
   <label>学校</label>
-  <input type="text" name="photo" id="picString"  ng-model="school"  />
+  <input type="text"   ng-model="school"  />
 </div>
 <div class="field">
   <label>地点</label>
-  <input type="text" name="photo" id="picString"  ng-model="location" />
+  <input type="text"   ng-model="location" />
 </div>
 <div class="field">
   <label>生日</label>
     <div class="field">
-      <input type="date" name="shipping[first-name]" placeholder="生日日期"  ng-model="birth">
+      <input type="date" value="2012-10-08"  placeholder="生日日期"  ng-model="birth">
     </div>
 </div>
 <hr>

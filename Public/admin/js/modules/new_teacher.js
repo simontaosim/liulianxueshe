@@ -1,6 +1,24 @@
 //加载遮罩
 var loader = $('#loader').modal('setting', 'closable', false);
 
+Date.prototype.Format = function(fmt)
+{ //author: meizz
+  var o = {
+    "M+" : this.getMonth()+1,                 //月份
+    "d+" : this.getDate(),                    //日
+    "h+" : this.getHours(),                   //小时
+    "m+" : this.getMinutes(),                 //分
+    "s+" : this.getSeconds(),                 //秒
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度
+    "S"  : this.getMilliseconds()             //毫秒
+  };
+  if(/(y+)/.test(fmt))
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));
+  for(var k in o)
+    if(new RegExp("("+ k +")").test(fmt))
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));
+  return fmt;
+}
 //处理图片上传
 if (!(window.File || window.FileReader || window.FileList || window.Blob)) {
     alert('你妈喊你换Chrome浏览器啦');
@@ -42,7 +60,7 @@ newTeacherApp.controller('newTeacherCtrl', function($scope, $http){
     });
   }
 
-  $scope.createNewTeacher = function(name, qq, mobile, email, thumbnail,cover,truename,sex,birth,img,location,major, school,constellation,profile, charts, model_3d, effect, model_express, design_theory, achieved, achieving){
+  $scope.createNewTeacher = function(parametrize, name, qq, mobile, email, thumbnail,cover,truename,sex,birth,img,location,major, school,constellation,profile, charts, model_3d, effect, model_express, design_theory, achieved, achieving){
       if (truename == undefined | truename == '' | truename ==null ) {
         alert('真实姓名务必填写!');
         return false;
@@ -55,14 +73,15 @@ newTeacherApp.controller('newTeacherCtrl', function($scope, $http){
         alert('用户名已经被占用!');
         return false;
       }
-
+      var birth_format = (new Date(birth)).Format("yyyy-MM-dd");
+      console.log(birth_format.toString());
 
       var post_data = {
           thumbnail: $("#thumbnailStringHidden").val(),
           cover:$("#coverStringHidden").val(),
           truename: truename,
           sex:sex,
-          birth:birth,
+          birth:birth_format,
           img:img,
           location: location,
           major: major,
@@ -79,7 +98,8 @@ newTeacherApp.controller('newTeacherCtrl', function($scope, $http){
           name: name,
           qq:qq,
           mobile: mobile,
-          email: email
+          email: email,
+          parametrize: parametrize
       }
       // alert(post_data.truename);
       $.post('/admin/api/teacher/create', post_data, function (response) {

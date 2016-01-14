@@ -230,7 +230,8 @@
                         </td>
                         <td>{{obj.uid}}</td>
                         <td><a href="#" ng-click="show(obj.uid)">{{obj.truename}}</a></td>
-                        <td>{{obj.birth}}</td>
+                        <td id="obj_birth">{{obj.birth}}</td>
+
                         <td>
                           {{obj.major}}
                         </td>

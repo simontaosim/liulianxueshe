@@ -20,7 +20,6 @@ class UserModel extends Model {
 
     //添加用户
     public function addUser($arr, $ability = ""){
-    	$arr["createtime"] = $arr["updatetime"] = time();
         if ($arr["role"] == 1){ //身份是老师，需要插入能力值
             $user_id = $this->add($arr);//插入到user表中
             if ($user_id){

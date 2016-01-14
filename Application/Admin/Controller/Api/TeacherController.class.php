@@ -23,9 +23,9 @@ class TeacherController extends Controller {
       $item['effect'] = $my_ability['effect'];
       $item['design_theory'] = $my_ability['design_theory'];
       $item['parametrize'] = $my_ability['parametrize'];
+      $item['birth'] = date("Y-m-d", strtotime($item["birth"]));
       $back_data[] = $item;
     }
-
 
     $this->ajaxReturn($back_data, "json");
   }
@@ -73,7 +73,7 @@ class TeacherController extends Controller {
       birth => I('post.birth',''),
       location => I('post.location','')
     ];
-    $back_data = $this->teacherModel->update($data);
+      $back_data = $this->teacherModel->update($data);
     $this->teacherModel->ModifyUpdatetime($data['uid']);
     $this->ajaxReturn($back_data, "json");
 
@@ -84,7 +84,7 @@ class TeacherController extends Controller {
     $arr["name"] = I('post.name', '');
     $arr["truename"] = I('post.truename', '');
     $arr["passwd"] = 'e10adc3949ba59abbe56e057f20f883e';
-    $arr["img"] = I('post.img', '');
+    $arr["img"] = I('post.cover', '');
     $arr["profile"] = I('post.profile', '');
     $arr["major"] = I('post.major', '');
     $arr["school"] = I('post.school', '');
@@ -99,30 +99,45 @@ class TeacherController extends Controller {
     $arr["role"] = 1;
     $arr["valid"] = 1;
     $arr["more"] = "";
-    // $arr["updatetime"] = time();
-    // $arr["createtime"] = time();
+    $arr["updatetime"] = date("Y-m-d H:i:s");
+    $arr["createtime"] = date("Y-m-d H:i:s");
     $arr["location"] = I('post.location', '');
     $arr["thumbnail"] = I('post.thumbnail', '');
-    $back_data = $this->teacherModel->create($arr);
-    $name = $arr["name"];
-    $saved_teacher = $this->teacherModel->where('name ="'.$name.'"')->find();
-    $ablity = new \Api\Model\AbilityModel();
-    $ablity_attr  = array(
-      'user_id' => $saved_teacher["uid"],
-      'charts' => I('post.charts', ''),
-      'model_3d' => I('post.model_3d', ''),
-      'model_express' => I('post.model_express', ''),
-      'effect' => I('post.effect', ''),
-      'design_theory' => I('post.design_theory', ''),
-      'parametrize' => I('post.parametrize', '')
-    );
-      $ablity->insertAbility($ablity_attr);
+    // $back_data = $this->teacherModel->create($arr);
+    // $name = $arr["name"];
+    // $saved_teacher = $this->teacherModel->where('name ="'.$name.'"')->find();
+    // $ablity = new \Api\Model\AbilityModel();
+    // $ablity_attr  = array(
+    //   'user_id' => $saved_teacher["uid"],
+    //   'charts' => I('post.charts', ''),
+    //   'model_3d' => I('post.model_3d', ''),
+    //   'model_express' => I('post.model_express', ''),
+    //   'effect' => I('post.effect', ''),
+    //   'design_theory' => I('post.design_theory', ''),
+    //   'parametrize' => I('post.parametrize', '')
+    // );
+    //   $ablity->insertAbility($ablity_attr);
+    $ability = array();
+    $ability["charts"] = I('post.charts', '');
+    $ability["model_3d"] = I('post.model_3d', '');
+    $ability["model_express"] = I('post.model_express', '');
+    $ability["effect"] = I('post.effect', '');
+    $ability["design_theory"] = I('post.design_theory', '');
+    $ability["parametrize"] = I('post.parametrize', '');
+    $this->teacherModel = new \Api\Model\UserModel();
+    $back_data = $this->teacherModel->addUser($arr, $ability);
 
-    $this->ajaxReturn($saved_teacher, "json");
+    $this->ajaxReturn($back_data, "json");
 
 
     // echo json_encode($arr);
 
+  }
+
+  public function testtime(){
+    $arr["updatetime"] = date("Y-m-d H:i:s");
+    $arr["createtime"] = date("Y-m-d H:i:s");
+    var_dump($arr);die;
   }
 
   public function upLoadPic(){
