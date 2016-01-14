@@ -104,180 +104,195 @@
         <div class="active section">新增老师</div>
     </div>
 </div>
+<script src="/Public/admin/js/lib/angular.min.js"></script>
+<script src="/Public/admin/js/lib/jquery.form.min.js"></script>
+<div class="container" ng-app="newTeacherApp" ng-controller="newTeacherCtrl">
+    <form action="/admin/api/teacher/upLoadPic" enctype="multipart/form-data" method="post" class="ui form" id="uploadPicForm">
+    <div class="field ui image rounded">
+    <img id='previewImag' src="" alt="" />
+    </div>
+    <div class="field">
+      <label>上传头像</label>
+      <input type="file" name="photo" id="picString"  />
+    </div>
 
-<div class="container">
+<hr>
+  </form>
   <form class="ui form">
-<h4 class="ui dividing header">Shipping Information</h4>
+<input type="hidden" name="cover" id="coverStringHidden" ng-model="cover" />
+      <input type="hidden" name="thumbnail" id="thumbnailStringHidden" ng-model="thumbnail"  />
 <div class="field">
-  <label>Name</label>
-  <div class="two fields">
+  <label>姓名</label>
     <div class="field">
-      <input type="text" name="shipping[first-name]" placeholder="First Name">
+      <input type="text" name="shipping[first-name]" placeholder="请输入真实姓名" ng-model="truename">
     </div>
-    <div class="field">
-      <input type="text" name="shipping[last-name]" placeholder="Last Name">
-    </div>
-  </div>
 </div>
 <div class="field">
-  <label>Billing Address</label>
-  <div class="fields">
-    <div class="twelve wide field">
-      <input type="text" name="shipping[address]" placeholder="Street Address">
+  <label>用户名</label>
+    <div class="field">
+      <input type="text" name="shipping[first-name]" placeholder="请输入用户名" ng-blur="checkUsername(name)" ng-model="name">
+      
     </div>
-    <div class="four wide field">
-      <input type="text" name="shipping[address-2]" placeholder="Apt #">
-    </div>
-  </div>
 </div>
+<div class="field">
+  <label>qq</label>
+    <div class="field">
+      <input type="text" name="shipping[first-name]" placeholder="请输入qq" ng-model="qq">
+    </div>
+</div>
+<div class="field">
+  <label>mobile</label>
+    <div class="field">
+      <input type="text" name="shipping[first-name]" placeholder="请输入手机号" ng-model="mobile">
+    </div>
+</div>
+<div class="field">
+  <label>email</label>
+    <div class="field">
+      <input type="text" name="shipping[first-name]" placeholder="请输入邮箱" ng-model="email">
+    </div>
+</div>
+<div class="field">
+  <label>专业</label>
+  <input type="text" name="photo" id="picString" ng-model="major" />
+</div>
+<div class="field">
+  <label>性别</label>
+  <select class="ui fluid dropdown" ng-model="sex">
+    <option value="1">男</option>
+    <option value="0">女</option>
+  </select>
+</div>
+<div class="field">
+  <label>学校</label>
+  <input type="text" name="photo" id="picString"  ng-model="school"  />
+</div>
+<div class="field">
+  <label>地点</label>
+  <input type="text" name="photo" id="picString"  ng-model="location" />
+</div>
+<div class="field">
+  <label>生日</label>
+    <div class="field">
+      <input type="date" name="shipping[first-name]" placeholder="生日日期"  ng-model="birth">
+    </div>
+</div>
+<hr>
+<h4 class="ui dividing header">能力:</h4>
 <div class="six fields">
   <div class="field">
-    <label>State</label>
-    <select class="ui fluid dropdown">
-      <option value="">State</option>
-      <option value="AL">Alabama</option>
+    <label>分析图</label>
+    <select class="ui fluid dropdown"  ng-model="charts">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
     </select>
   </div>
   <div class="field">
-    <label>State</label>
-    <select class="ui fluid dropdown">
-      <option value="">State</option>
-      <option value="AL">Alabama</option>
+    <label>3d建模</label>
+    <select class="ui fluid dropdown"  ng-model="model_3d">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
     </select>
   </div>
   <div class="field">
-    <label>State</label>
-    <select class="ui fluid dropdown">
-      <option value="">State</option>
-      <option value="AL">Alabama</option>
+    <label>模型表达</label>
+    <select class="ui fluid dropdown" ng-model="model_express">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
     </select>
   </div>
   <div class="field">
-    <label>State</label>
-    <select class="ui fluid dropdown">
-      <option value="">State</option>
-      <option value="AL">Alabama</option>
+    <label>效果图</label>
+    <select class="ui fluid dropdown" ng-model="effect">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
     </select>
   </div>
   <div class="field">
-    <label>State</label>
-    <select class="ui fluid dropdown">
-      <option value="">State</option>
-      <option value="AL">Alabama</option>
+    <label>参数化</label>
+    <select class="ui fluid dropdown" ng-model="parametrize">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
     </select>
   </div>
   <div class="field">
-    <label>State</label>
-    <select class="ui fluid dropdown">
-      <option value="">State</option>
-      <option value="AL">Alabama</option>
+    <label>设计理论</label>
+    <select class="ui fluid dropdown" ng-model="design_theory">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
     </select>
   </div>
 </div>
-<h4 class="ui dividing header">Billing Information</h4>
+<hr>
+<h4 class="ui dividing header">业绩统计:</h4>
+<div class="two fields">
+  <div class="field">
+    <label>接单数</label>
+    <input type="number" name="shipping[first-name]" placeholder="" ng-model="achieved">
+  </div>
+  <div class="field">
+    <label>当前单数</label>
+      <input type="number" name="shipping[first-name]" placeholder="" ng-model="achieving">
+  </div>
+
+</div>
 <div class="field">
-  <label>Card Type</label>
-  <div class="ui selection dropdown">
-    <input type="hidden" name="card[type]">
-    <div class="default text">Type</div>
-    <i class="dropdown icon"></i>
-    <div class="menu">
-      <div class="item" data-value="visa">
-        <i class="visa icon"></i>
-        Visa
-      </div>
-      <div class="item" data-value="amex">
-        <i class="amex icon"></i>
-        American Express
-      </div>
-      <div class="item" data-value="discover">
-        <i class="discover icon"></i>
-        Discover
-      </div>
-    </div>
-  </div>
+  <label>个人简介</label>
+  <textarea name="name" rows="8" cols="40" ng-model="profile"></textarea>
 </div>
-<div class="fields">
-  <div class="seven wide field">
-    <label>Card Number</label>
-    <input type="text" name="card[number]" maxlength="16" placeholder="Card #">
-  </div>
-  <div class="three wide field">
-    <label>CVC</label>
-    <input type="text" name="card[cvc]" maxlength="3" placeholder="CVC">
-  </div>
-  <div class="six wide field">
-    <label>Expiration</label>
-    <div class="two fields">
-      <div class="field">
-        <select class="ui fluid search dropdown" name="card[expire-month]">
-          <option value="">Month</option>
-          <option value="1">January</option>
-          <option value="2">February</option>
-          <option value="3">March</option>
-          <option value="4">April</option>
-          <option value="5">May</option>
-          <option value="6">June</option>
-          <option value="7">July</option>
-          <option value="8">August</option>
-          <option value="9">September</option>
-          <option value="10">October</option>
-          <option value="11">November</option>
-          <option value="12">December</option>
-        </select>
-      </div>
-      <div class="field">
-        <input type="text" name="card[expire-year]" maxlength="4" placeholder="Year">
-      </div>
-    </div>
-  </div>
+<hr>
+<div class="field">
+  <label for="">星座</label>
+  <select class="ui fluid search dropdown" name="card[expire-month]" ng-model="constellation">
+    <option value="白羊座">白羊座</option>
+    <option value="金牛座">金牛座</option>
+    <option value="双子座">双子座</option>
+    <option value="巨蟹座">巨蟹座</option>
+    <option value="狮子座">狮子座</option>
+    <option value="处女座">处女座</option>
+    <option value="天秤座">天秤座</option>
+    <option value="天蝎座">天蝎座</option>
+    <option value="射手座">射手座</option>
+    <option value="摩羯座">摩羯座</option>
+    <option value="双鱼座">双鱼座</option>
+    <option value="水瓶座">水瓶座</option>
+  </select>
 </div>
- <h4 class="ui dividing header">Receipt</h4>
- <div class="field">
-  <label>Send Receipt To:</label>
-  <div class="ui fluid multiple search selection dropdown">
-    <input type="hidden" name="receipt">
-    <i class="dropdown icon"></i>
-    <div class="default text">Saved Contacts</div>
-    <div class="menu">
-      <div class="item" data-value="jenny" data-text="Jenny">
-        <img class="ui mini avatar image" src="/images/avatar/small/jenny.jpg">
-        Jenny Hess
-      </div>
-      <div class="item" data-value="elliot" data-text="Elliot">
-        <img class="ui mini avatar image" src="/images/avatar/small/elliot.jpg">
-        Elliot Fu
-      </div>
-      <div class="item" data-value="stevie" data-text="Stevie">
-        <img class="ui mini avatar image" src="/images/avatar/small/stevie.jpg">
-        Stevie Feliciano
-      </div>
-      <div class="item" data-value="christian" data-text="Christian">
-        <img class="ui mini avatar image" src="/images/avatar/small/christian.jpg">
-        Christian
-      </div>
-      <div class="item" data-value="matt" data-text="Matt">
-        <img class="ui mini avatar image" src="/images/avatar/small/matt.jpg">
-        Matt
-      </div>
-      <div class="item" data-value="justen" data-text="Justen">
-        <img class="ui mini avatar image" src="/images/avatar/small/justen.jpg">
-        Justen Kitsune
-      </div>
-    </div>
-  </div>
-</div>
- <div class="ui segment">
-  <div class="field">
-    <div class="ui toggle checkbox">
-      <input type="checkbox" name="gift" tabindex="0" class="hidden">
-      <label>Do not include a receipt in the package</label>
-    </div>
-  </div>
-</div>
-<div class="ui button" tabindex="0">Submit Order</div>
+
+
+<a class="ui button" tabindex="0" ng-click="createNewTeacher(name, qq, mobile, email, thumbnail,cover,truename,sex,birth,img,location,major, school,constellation,profile, charts, model_3d, effect, model_express, design_theory, achieved, achieving)">确认并提交</a>
+<a class="ui button" href="/admin/page/teacher">返回</a>
 </form>
+<br><br><br><br>
 </div>
+<div class="ui basic modal load" id="loader">
+
+    <div class="ui active">
+        <div class="ui medium text loader"> 数据载入中，请稍后</div>
+    </div>
+    <div class="actions">
+        <div class="ui approve button">停止载入</div>
+    </div>
+</div>
+<script src="/Public/admin/js/modules/new_teacher.js"></script>
 
         </div>
     </div>

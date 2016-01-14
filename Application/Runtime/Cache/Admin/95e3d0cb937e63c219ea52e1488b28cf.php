@@ -104,16 +104,16 @@
   <div class="results"></div>
 </div>
     <div></div>
-<a href="/admin/page/teacher/newteacher" class="ui blue button" style="float:right;">
+<a href="/admin/page/work/newwork" class="ui blue button" style="float:right;">
   <i class="plus icon"></i>
-  录入新的老师
+  添加新的作品
 </a>
   <br /><br />
 
 </div>
 <script src="/Public/admin/js/lib/angular.min.js"></script>
 
-<div id="main-operation"  class="container-fluid" ng-app="teacherApp" ng-controller="teacherCtrl" >
+<div id="main-operation"  class="container-fluid" ng-app="workApp" ng-controller="workCtrl" >
   <div class="ui success message">
     <i class="close icon"></i>
     <div class="header">
@@ -126,7 +126,7 @@
                     		<th colspan="4">
                     			<h3><?php echo ($search_result_title); ?></h3><span class="ui block right floated" id="pageMark">page: 1</span>
                     		</th>
-                    	<th colspan="15">
+                    	<th colspan="4">
 
                             <div class="ui right floated pagination menu">
 
@@ -134,142 +134,53 @@
                             </div>
                       </th>
                     </tr>
-                    <tr>
-                      <th colspan="9">
-                        教师资料
-                      </th>
-                      <th colspan="6">
-                        能力评估
-                      </th>
-                      <th colspan="4">
-                        业绩统计
-                      </th>
-                    </tr>
                       <tr>
                         <th>
                           删除
                         </th>
-                        <th>
-                          编辑
-                        </th>
-                        <th>
-                          头像
-                        </th>
-                        <th>
-                          教师ID
-                        </th>
-                        <th>
-                          姓名
-                        </th>
-                        <th>
-                          出生日期
-                        </th>
-                        <th>
-                          专业
-                        </th>
-                        <th>
-                          学校
-                        </th>
-                        <th>
-                          地点
-                        </th>
-                        <th>
-                          分析图
-                        </th>
-                        <th>
-                          3d建模
-                        </th>
-                        <th>
-                          模型表达
-                        </th>
-                        <th>
-                          效果图
-                        </th>
-                        <th>
-                          参数化
-                        </th>
-                        <th>
-                          设计理论
-                        </th>
-                        <th>
-                          接单数
-                        </th>
-                        <th>
-                          当前单数
-                        </th>
-                        <th>
-                          创建时间
-                        </th>
-                        <th>
-                          更新时间
-                        </th>
+                      	<th>作品缩略图</th>
+                      <th>作品ID</th>
+                      <th>名称</th>
+                      <th>作者</th>
+                      <th>上传时间</th>
+                      <th>更新时间</th>
+                      <th>编辑</th>
                     </tr></thead>
                     <tbody ng-repeat="obj in objs">
-                      <tr id="obj_{{obj.uid}}">
+                      <tr id="obj_{{obj.wid}}">
                         <td>
                         <span  class="ui small basic icon buttons">
-                            <button id="btn_remove{{obj.uid}}" ng-mouseover="myhint(obj.uid)" ng-click="remove_record(obj.uid)" class="ui button remove-btn" data-content="删除"><i class="remove icon"></i></button>
+                            <button id="btn_remove{{obj.wid}}" ng-mouseover="myhint(obj.wid)" ng-click="remove_record(obj.wid)" class="ui button remove-btn" data-content="删除"><i class="remove icon"></i></button>
 
                         </span>
 
 
                             </td>
-                            <td>
-                              <span  class="ui small basic icon buttons">
-
-                                  <a href="/admin/page/work/editwork?wid={{obj.uid}}" class="ui button edit-btn" data-content="编辑"><i class="edit icon"></i></a>
-                              </span>
-                            </td>
-                        <td ng-click="showOriginSize(obj.uid)" width="100px">
+                        <td ng-click="showOriginSize(obj.wid)" width="100px">
                             <span  class="ui small rounded centered image" style="text-align: center; width:50%;">
                                 <a href="#" ng-click="showOriginSize(obj.wid)">
-                                    <img src="/TeacherImages/thumb/{{obj.thumbnail}}" alt="点击查查原图" width="100">
+                                    <img src="/WorkImages/thumb/{{obj.thumbnail}}" alt="点击查查原图" width="100">
                                 </a>
 
                             </span>
                         </td>
-                        <td>{{obj.uid}}</td>
-                        <td><a href="#" ng-click="show(obj.uid)">{{obj.truename}}</a></td>
-                        <td>{{obj.birth}}</td>
-                        <td>
-                          {{obj.major}}
-                        </td>
-                        <td>
-                          {{obj.school}}
-                        </td>
-                          <td>
-                              {{obj.location}}
-                          </td>
-                          <td>
-                              {{obj.charts}}
-                          </td>
-                          <td>
-                              {{obj.model_3d}}
-                          </td>
-                          <td>
-                              {{obj.model_express}}
-                          </td>
-                          <td>
-                              {{obj.effect}}
-                          </td>
-                          <td>
-                                {{obj.parametrize}}
-                          </td>
-                          <td>
-                              {{obj.design_theory}}
-                          </td>
-                          <td>
-                              {{obj.achieved}}
-                          </td>
-                          <td>
-                              {{obj.achieving}}
-                          </td>
+                        <td>{{obj.wid}}</td>
+                        <td><a href="#" ng-click="show(obj.wid)">{{obj.title}}</a></td>
+                        <td>{{obj.author}}</td>
                         <td>{{obj.createtime}}</td>
                         <td>{{obj.updatetime}}</td>
+                        <td>
+                        <span  class="ui small basic icon buttons">
+
+                            <a href="/admin/page/work/editwork?wid={{obj.wid}}" class="ui button edit-btn" data-content="编辑"><i class="edit icon"></i></a>
+                        </span>
+
+
+						                </td>
                       </tr>
                     </tbody>
                     <tfoot>
-                      <tr><th colspan="19">
+                      <tr><th colspan="8">
                         <div class="ui right floated pagination menu">
 
                         </div>
@@ -319,7 +230,7 @@
     <div class="ui basic modal destroy">
 				  <div class="header">警告<i class="warning circle icon"></i></div>
 				  <div class="content">
-				    <p>是否确认删除该教师?</p>
+				    <p>是否确认删除该作品?</p>
 				  </div>
 				  <div class="actions">
 				    <div class="ui cancel button">取消</div>
@@ -339,7 +250,7 @@
     </div>
 </div>
 <script src="/Public/admin/js/modules/massage.js"></script>
-<script src="/Public/admin/js/model/teacher.js"></script>
+<script src="/Public/admin/js/model/work.js"></script>
 <script src="/Public/admin/js/modules/index_module.js"></script>
 
         </div>

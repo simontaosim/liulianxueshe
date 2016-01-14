@@ -12,13 +12,7 @@ $("#picString").change(function(){
           return;
       }else{
           var reader = new FileReader();//新建一个FileReader
-          reader.readAsText(files[0], "UTF-8");//读取文件
-          reader.onload = function(evt){ //读取完文件之后会回来这里
-              var fileString = evt.target.result;
-              $("#picStringHidden").val(fileString);
-              $("#uploadPicForm").ajaxSubmit(function(data){
-                    $("#coverStringHidden").val(data.cover);
-                    $("#thumbnailStringHidden").val(data.thumb);
+          reader.readAsText(files[0], "U{{obj.achieved}}idden").val(data.thumb);
                     $('#previewImag').attr("src", '/WorkImages/'+data.cover);
               });
           }

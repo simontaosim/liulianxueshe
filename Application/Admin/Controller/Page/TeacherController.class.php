@@ -18,8 +18,7 @@ class TeacherController extends Controller {
     }
 
     public function newTeacher(){
-      $this->menuSetting(8);
-        $this->menuSetting(7);
+        $this->menuSetting(8);
         $this->display('new_teacher');
     }
 
