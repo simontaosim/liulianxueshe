@@ -154,7 +154,7 @@
 </div>
 <div class="field">
   <label>专业</label>
-  <input type="text" name="photo" id="picString" ng-model="major" />
+  <input type="text"  id="picString" ng-model="major" />
 </div>
 <div class="field">
   <label>性别</label>
@@ -278,7 +278,7 @@
 </div>
 
 
-<a class="ui button" tabindex="0" ng-click="createNewTeacher(name, qq, mobile, email, thumbnail,cover,truename,sex,birth,img,location,major, school,constellation,profile, charts, model_3d, effect, model_express, design_theory, achieved, achieving)">确认并提交</a>
+<a class="ui button" tabindex="0" ng-click="createNewTeacher(parametrize, name, qq, mobile, email, thumbnail,cover,truename,sex,birth,img,location,major, school,constellation,profile, charts, model_3d, effect, model_express, design_theory, achieved, achieving)">确认并提交</a>
 <a class="ui button" href="/admin/page/teacher">返回</a>
 </form>
 <br><br><br><br>

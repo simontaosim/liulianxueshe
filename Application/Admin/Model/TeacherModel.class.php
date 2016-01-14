@@ -6,7 +6,7 @@ class TeacherModel extends UserModel {
 
   //获取教师展示信息列表详情 $num：每页获取的记录条数，$page：第几页
   public function getList($num, $page){
-    $res = $this->where("valid='1' AND role='1'")->order("updatetime desc")->limit(($page-1)*$num, $num)->getField("uid, truename, sex, img, major, school, createtime, birth, constellation, profile, location, achieved, achieving");
+    $res = $this->where("valid='1' AND role='1'")->order("updatetime desc")->limit(($page-1)*$num, $num)->getField("uid, truename, sex, img, major, school, createtime, birth, constellation, profile, location, achieved, achieving, thumbnail");
     return $res;
   }
 

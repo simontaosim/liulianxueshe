@@ -25,7 +25,9 @@ class WorkController extends Controller {
       post => I('post.post', ''),
       pics => I('post.pic_url', ''),
       content => I('post.content', ''),
-      valid => I('post.valid', '1')
+      valid => I('post.valid', '1'),
+      createtime => date("Y-m-d H:i:s"),
+      updatetime => date("Y-m-d H:i:s")
     ];
     $work = new \Admin\Model\WorkModel();
     $work->addWork($data);
@@ -38,7 +40,8 @@ class WorkController extends Controller {
       title => I('post.title', ''),
       thumbnail => I('post.thumbnail', ''),
       cover => I('post.cover', ''),
-      content => I('post.content','')
+      content => I('post.content',''),
+      updatetime => date("Y-m-d H:i:s")
     ];
     $work = new \Admin\Model\WorkModel();
     $work->modifyWork($data);
